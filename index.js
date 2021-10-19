@@ -11,12 +11,6 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-// const titleCased = () => {
-//     return tutorials
-// }
-
-
-
 function makeTitleCase(string) {
   //console.log(string);
   let newString = "";
@@ -38,16 +32,26 @@ function makeTitleCase(string) {
   return newString;
 }
 
-function titleCased(arrOfStrings) {
-  let newArr = arrOfStrings.map(makeTitleCase)
-  return newArr
+const titleCased = () => {
+  return tutorials.map(makeTitleCase)
 }
 
-console.log(
-  titleCased(tutorials)
-)
+console.log( titleCased() )
 
-
+//testing this function only
 // console.log(
 //   makeTitleCase("hello good sir.")
 // )
+
+
+// testing the whole thing myself
+// function titleCased(arrOfStrings) {
+//   let newArr = arrOfStrings.map(makeTitleCase)
+//   return newArr
+// }
+
+// testing the whole thing myself
+// console.log(
+//   titleCased(tutorials)
+// )
+
