@@ -11,6 +11,43 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+// const titleCased = () => {
+//     return tutorials
+// }
+
+
+
+function makeTitleCase(string) {
+  //console.log(string);
+  let newString = "";
+  for (let index = 0; index < string.length; index++) {
+
+    if (index === 0) {
+      //console.log("x")
+      newString += string[0].toUpperCase();
+    } else if (string[index - 1] === " ") {
+      //console.log("y")
+      newString += string[index].toUpperCase();
+    } else {
+      //console.log("z")
+      //console.log(`newstring: "${newString}" string: "${string}"`)
+      newString += string[index];
+    }
+
+  }
+  return newString;
 }
+
+function titleCased(arrOfStrings) {
+  let newArr = arrOfStrings.map(makeTitleCase)
+  return newArr
+}
+
+console.log(
+  titleCased(tutorials)
+)
+
+
+// console.log(
+//   makeTitleCase("hello good sir.")
+// )
